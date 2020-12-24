@@ -1,0 +1,31 @@
+.place-form {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+  box-shadow: -1px 0px 10px 0px rgb(194 177 114 / 72%);
+  border-radius: 10px;
+
+}
+.formButton  {
+  position: relative;
+  border-radius: 15px;
+  color: black;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  background: rgb(223, 41, 41);
+  outline: none;
+  border: none;
+  
+}
+.formButton:disabled{
+  background: lightgray;
+  cursor: not-allowed;
+}
+
+.formButton:active{
+  background: rgb(230, 140, 140);
+}
+

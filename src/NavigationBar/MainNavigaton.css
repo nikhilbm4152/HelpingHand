@@ -1,0 +1,45 @@
+.side-drawer {
+    width: 3rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  .side-drawer div {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: white;
+  }
+  
+  /* .navigation-title {
+    color: white;
+  } */
+  
+  .navigation-title a {
+    text-decoration: none;
+    color: rgb(230, 207, 6);
+    padding: 0 16px;
+  }
+  
+  .navigation-header-nav {
+    display: none;
+  }
+  
+  .navigation-drawer-nav {
+    height: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .side-drawer {
+      display: none;
+    }
+  
+    .navigation-header-nav {
+      display: block;
+    }
+  }

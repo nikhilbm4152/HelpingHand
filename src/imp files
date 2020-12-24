@@ -1,0 +1,42 @@
+const formReducer = (state, action) => {
+    switch (action.type) {
+      case 'INPUT_CHANGE':
+        let formIsValid = true; //helper variable  
+        for(const inputID in state.inputs){
+          if(inputID===action.inputId){
+            formIsValid=formIsValid && action.isValid
+          }else{
+            formIsValid=formIsValid && state.inputs[inputID].isValid
+          }
+        }
+        return{
+          ...state,
+          inputs:{
+            ...state.inputs,
+            [action.inputId]:{value : action.value, isValid: action.isValid}
+  
+          },
+          formValid:formIsValid
+        };
+       default:
+        return state;
+    }
+  };
+
+export const useForm = () => {
+    const[formState, dispatch]= useReducer(formReducer, {
+        inputs: {
+          // nested object for individual JSX input
+          title: {
+            value: "",
+            isValid: false, // this is for the individual JSX Input in the main return statement
+          },
+          discription: {
+            value: "",
+            isValid: false,
+          },
+        },
+        formValid: false, // to verify overall form is valid or not
+      });
+    
+};
